@@ -47,8 +47,16 @@ int main(int argc, char *argv[])
 		fclose(fp_in);
 		fclose(fp_out);
 
-		if(!output_flag)
+		if(turn!=0){
+			sprintf(str, "turn%ld.txt", turn-1);
+			remove(str);
+		}
+
+		if(!output_flag){
+			sprintf(str, "turn%ld.txt", turn);
+			remove(str);
 			break;
+		}
 		output_flag=0;
 
 		sprintf(str, "turn%ld.txt", turn);
