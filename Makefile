@@ -16,6 +16,9 @@ run: $(PROG)
 	./$(PROG)
 
 .PHONY: clean
-clean:
+clean: clean-output
 	$(RM) $(PROG) $(OBJS)
+
+.PHONY: clean-output
+clean-output:
 	$(RM) $(TOCLEAN)
