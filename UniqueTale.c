@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 
 		fgets(toexclude, 0xffff, fp_in);
 		fputs(toexclude, res_fp);
+		fflush(res_fp);
 
 		while(!feof(fp_in)){
 			fgets(str, 0xffff, fp_in);
